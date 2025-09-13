@@ -1,0 +1,329 @@
+*{
+    padding: 0px;
+    margin: 0;
+    font-family: sans-serif;
+}    
+body{
+    background-color: black;
+    color:white;
+} 
+.left{
+    width:350px;
+    /* m-width: 2vw;  */
+    /* padding: 11px; */
+} 
+.right{
+    width: 75vw;
+    height:98vh;
+    overflow: hidden; /* jo card hai vo play bar k bahar na jai is liye */
+}      
+           
+.home ul li svg{
+    /*svg ke size ko set karne k liye */
+    width: 20px;
+}    
+.home ul li{
+    list-style: none; 
+    display: flex; 
+    font-size: small; 
+    gap:20px; 
+    text-align: center; 
+    margin-top:15px;
+}  
+.home{
+    padding :0px 10px ; 
+}   
+.heading{
+    display: flex;
+    gap:100px;
+}
+.plussvg{
+    width: 15px;
+} 
+.footer{
+    font-size:10px;
+    display: flex;
+    gap: 5px;
+    font-size: 11px;
+    position:absolute;
+    bottom: 15px;
+    font-weight: 400; 
+}       
+.footer a{
+    color:rgb(189, 185, 185);
+} 
+.library{
+    min-height: 71vh;
+    position:relative;
+} 
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position:relative;
+    margin-top:10px;
+    height:32px;
+}  
+.capsule {
+    position: absolute;
+    right:30px;   
+    gap:8px;
+    font-size:17px;
+    padding: 20px;
+}             
+.signin{
+    border-radius:40px;
+    padding:8px;
+    color:gray; 
+} 
+.login{
+    border-radius:40px;
+    padding:8px;
+    color:gray;
+    background-color: white; 
+}  
+.signin:hover{
+    font-size: 0.8rem;
+    color:white;
+    cursor: pointer; 
+}
+.login:hover{
+    font-size: 0.8rem;
+    color:black;
+    cursor: pointer; 
+} 
+
+
+.card{
+    width:15vw;
+    /* height:55vh; */
+    background-color:#252525;
+}  
+.card img{
+    width:100%;
+    /* width: 200px ; */
+    height: 200px ;
+    object-fit:cover;
+} 
+.cardcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;/*to make the card in center of right container*/
+    gap:15px;
+    flex-wrap: wrap;
+
+    max-height: 62vh;
+    overflow:scroll;
+}
+.playbar{
+    position: fixed;/*right k relative hai*/
+    bottom: 0px;
+    min-height:52px; /*min heigh because if songname is long then the playbar height will be automatically adjust*/
+    padding:15px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}    
+.songtime{
+    /* padding:10px; */
+    margin-right:60px;
+    font-size: 20px;
+    padding-right:30px;
+}       
+.songname{ 
+    padding:0px 10px;
+    margin-bottom:8px;
+    font-size: 20px;
+}   
+.seekbar{
+    /* border: 2px solid white; */
+    border-radius: 10px;
+    background-color: white;
+    height:5px;
+    width:95%;
+    position: absolute;
+    bottom:13px;
+    left:10px;
+    cursor: pointer;
+}              
+.circle{ 
+    width: 14px;
+    height: 14px;
+    border-radius:13px;
+    background-color: white;
+    position: absolute;
+    bottom:8px;
+    left: 5px ; 
+    transition: left 0.5s;
+}                   
+.playbutton svg{
+    width: 40px;
+    height:40px;
+} 
+.card{
+    position: relative;
+}
+.playbutton{
+    position:absolute;
+    top:133px;
+    right:25px;
+} 
+.card p{
+    font-size: 18px;
+}       
+
+
+/* to make scrollbar dark*/
+/* WebKit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 6px;
+  border: 3px solid #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1e1e1e;
+}
+
+ 
+
+
+
+.right{
+    position:relative;
+}
+.right .playbar{
+    position:absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color:rgb(53, 52, 52)
+    /* padding: 10px; */
+}       
+  
+.songbutton{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}  
+
+.songlist ul{
+    padding:10px 0px;
+} 
+.songlist ul li{
+    list-style:decimal;
+    font-size:20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:18px;   
+    margin:10px 0px;  
+    padding: 10px;
+    cursor: pointer;
+}                   
+.songinfo{
+    font-size: 13px;
+    word-break: break-all;
+}   
+.playnow{
+    font-size:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.songlist{
+    height:300px;
+    overflow:scroll;
+} 
+.songlist{
+    margin-bottom: 30px;
+}  
+   
+.songbutton{
+    cursor: pointer;
+}
+
+.hamburger{
+    display: none;  /*hamburger logo is hidden in big screen*/
+}  
+.crosssvg{
+    display: none;
+} 
+.card{
+    cursor: pointer;
+} 
+@media (max-width:1275px){
+    .left{
+        position:absolute;
+        left:-130%; /*30 % jada is liye kyoki margin se dikkat na i*/
+        transition: all 0.3s;
+        z-index:1; /* jb ham hamburger pr click kare toh left right k upper aa jai*/
+        background-color: black;
+        width:100vw;
+        height:100vh;
+    }      
+    .right{
+        width: 100%;
+    }
+    .hamburger{
+        display: flex; /*hamburger logo is visible in small screen*/
+        cursor: pointer;
+    }
+    .crosssvg{
+        display: flex;/*cross svg will be visible in hamburger*/
+        position: absolute;
+        z-index: 1;
+        left: 350px;
+        top:25px;
+    }  
+    .seekbar{
+        width: 93vw ;
+    } 
+      
+    .right{
+        margin: 0;
+    }
+    .playbar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:18px;
+    } 
+    .songtime{
+        margin: 0;
+        margin-bottom: 10px ;
+        padding: 0;
+    } 
+    .songlist{
+        min-height:550px;/*to make the song list fully visible*/
+    } 
+    .card{
+        width: 75vw;
+    }
+    .card img{
+        height: 30vh;
+    }
+    .cardcontainer{
+        max-height:62vh;
+        padding-bottom:30px;
+    }
+   .home ul li{
+    padding-top: 10px;
+   }
+   
+
+}  
